@@ -29,10 +29,6 @@ export default async ({ req, res, log, error }) => {
   const response = await users.list();
 
   return res.json({
-    users: response,
-    motto: "Build like a team of hundreds_",
-    learn: "https://appwrite.io/docs",
-    connect: "https://appwrite.io/discord",
-    getInspired: "https://builtwith.appwrite.io",
+    users: response
   });
 };
