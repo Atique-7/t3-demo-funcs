@@ -28,7 +28,9 @@ export default async ({ req, res, log, error }) => {
 
   const response = await users.list();
 
-  return response;
+  return res.json({
+    users: response
+  });
   // return res.json({
   //   users: response
   // });
