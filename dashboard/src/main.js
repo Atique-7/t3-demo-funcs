@@ -15,6 +15,7 @@ export default async ({ req, res, log, error }) => {
 
   console.log(req);
   console.log(req.payload);
+  context.log(req);
 
   const { startDate, endDate } = req.payload || {};
   const now = new Date();
@@ -72,8 +73,6 @@ export default async ({ req, res, log, error }) => {
           Query.lessThan('$updatedAt', range.end.toISOString()),
         ]
       );
-
-      console.log(documents);
 
       // Aggregate data by jobCardStatus and map to titles
       const aggregatedData = Object.entries(
