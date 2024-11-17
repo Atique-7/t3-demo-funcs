@@ -1,4 +1,4 @@
-import { Client, Users, Databases } from 'node-appwrite';
+import { Client, Users, Databases, Query } from 'node-appwrite';
 
 // This Appwrite function will be executed every time your function is triggered
 export default async ({ req, res, log, error }) => {
@@ -65,8 +65,8 @@ export default async ({ req, res, log, error }) => {
         '66b10c670021dc021477', // Replace with your Database ID
         '66e80a830013e7a81f31', // Replace with your Collection ID
         [
-          sdk.Query.greaterThan('updatedAt', range.start.toISOString()),
-          sdk.Query.lessThan('updatedAt', range.end.toISOString()),
+          Query.greaterThan('updatedAt', range.start.toISOString()),
+          Query.lessThan('updatedAt', range.end.toISOString()),
         ]
       );
 
