@@ -87,8 +87,8 @@ export default async ({ req, res, log, error }) => {
       results[key] = aggregatedData;
     }
 
-    res.json({ data: results });
+    return res.json({ data: results });
   } catch (error) {
-    res.json({ error: error.message }, 500);
+    return res.json({ error: error.message }, 500);
   }
 };
