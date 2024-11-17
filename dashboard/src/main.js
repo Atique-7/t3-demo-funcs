@@ -15,7 +15,6 @@ export default async ({ req, res, log, error }) => {
 
   console.log(req);
   console.log(req.payload);
-  context.log(req);
 
   const { startDate, endDate } = req.payload || {};
   const now = new Date();
