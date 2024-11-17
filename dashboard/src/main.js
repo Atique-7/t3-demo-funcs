@@ -70,6 +70,8 @@ export default async ({ req, res, log, error }) => {
         ]
       );
 
+      console.log(documents);
+
       // Aggregate data by jobCardStatus and map to titles
       const aggregatedData = Object.entries(
         documents.documents.reduce((acc, doc) => {
