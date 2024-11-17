@@ -14,9 +14,10 @@ export default async ({ req, res, log, error }) => {
     );
 
   console.log(req);
-  console.log(req.payload);
+  console.log(req.body);
+  const payload = JSON.parse(req.body);
 
-  const { startDate, endDate } = req.payload || {};
+  const { startDate, endDate } = payload || {};
   const now = new Date();
 
   // Define ranges for week, month, and year
