@@ -13,6 +13,9 @@ export default async ({ req, res, log, error }) => {
         'standard_a3f97cc2ff9a273cef1940cce2ca0086115a03c46a3cea19de2eebf83ada4186125b71125e10ce8ac853e2834bce01ff380124f3b380ba8bf4e7d070e04a1889e855dc50e45fe5e2d02a18b4140fffbf2574ba4a27b9450e83d4306495570d5a17bfdeb646f7d4100255e08837ac12b744f0ac439b5a2b9111d51b6bba56ac41'
     );
 
+  console.log(req);
+  console.log(req.payload);
+
   const { startDate, endDate } = req.payload || {};
   const now = new Date();
 
