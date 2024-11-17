@@ -65,8 +65,8 @@ export default async ({ req, res, log, error }) => {
         '66b10c670021dc021477', // Replace with your Database ID
         '66e80a830013e7a81f31', // Replace with your Collection ID
         [
-          Query.greaterThan('updatedAt', range.start.toISOString()),
-          Query.lessThan('updatedAt', range.end.toISOString()),
+          Query.greaterThan('$updatedAt', range.start.toISOString()),
+          Query.lessThan('$updatedAt', range.end.toISOString()),
         ]
       );
 
