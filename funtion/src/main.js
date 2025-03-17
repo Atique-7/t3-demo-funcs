@@ -7,7 +7,7 @@ export default async ({ req, res, log, error }) => {
   const client = new Client()
     .setEndpoint(process.env.APPWRITE_FUNCTION_API_ENDPOINT)
     .setProject(process.env.APPWRITE_FUNCTION_PROJECT_ID)
-    .setKey(req.headers['x-appwrite-key'] ?? 'standard_a3f97cc2ff9a273cef1940cce2ca0086115a03c46a3cea19de2eebf83ada4186125b71125e10ce8ac853e2834bce01ff380124f3b380ba8bf4e7d070e04a1889e855dc50e45fe5e2d02a18b4140fffbf2574ba4a27b9450e83d4306495570d5a17bfdeb646f7d4100255e08837ac12b744f0ac439b5a2b9111d51b6bba56ac41');
+    .setKey(req.headers['x-appwrite-key'] ?? 'standard_6c561ebb631cc7217e78905352cb1deb1e9279eb71678973ae0f1aff1cd1331fadcd650b6ad827adf01a2926d05c153db447f9926cd4da448ab129086ca45b836f90f8bacc3e1097c689b07971c05ed0fb9e697c3e58c21196edfad50e25f2644d26824d832e608bc8e69bfbd1df5918fe70a5f480abf4ca255ade07f2600703');
     const users = new Users(client);
 
     try {
